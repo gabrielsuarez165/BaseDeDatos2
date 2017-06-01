@@ -11,7 +11,7 @@ private String modelo;
 private String color;
 private long precio;
 private Collection<Revision> revisiones = new HashSet<Revision>();
-private long oid;
+private Long oid;
 
 /**
 * Constructor de la clase Vehiculo sin parametros
@@ -106,11 +106,11 @@ public void setPrecio(long precio) {
 	this.precio = precio;
 }
 
-public long getOid() {
+public Long getOid() {
 	return oid;
 }
 
-public void setOid(long oid) {
+public void setOid(Long oid) {
 	this.oid = oid;
 }
 
@@ -121,6 +121,15 @@ public Collection<Revision> getRevisiones() {
 public void setRevisiones(Collection<Revision> revisiones) {
 	this.revisiones = revisiones;
 }
+
+@Override
+	public boolean equals(Object obj) {
+		if(this.getOid() != null && obj == null && ((Vehiculo)obj).getOid() != null){
+			return this.getOid().equals(((Vehiculo)obj).getOid()); 
+		}else{
+			return super.equals(obj);
+		}
+	}
 
 
 }

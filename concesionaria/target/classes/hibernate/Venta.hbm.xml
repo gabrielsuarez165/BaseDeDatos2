@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 13-sep-2013 15:59:20 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping package="com.concesionaria.Model.Entity">
+    <class name="Venta" table="venta">
+    	<id name="oid" type="long" column="idventa"><generator class="increment" /></id>
+		<property name="montoTotal" column="montoTotal" type="long" />
+		<property name="fecha" column="fecha" type="timestamp"/>
+		<many-to-one name="cliente" column="idcliente" cascade="all"/>
+		<many-to-one name="vehiculo" column="idvehiculo" cascade="all"/>
+    </class>
+</hibernate-mapping>

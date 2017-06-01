@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 13-sep-2013 15:59:20 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping package="com.concesionaria.Model.Entity">
+    <class name="Cliente" table="cliente">
+    	<id name="oid" type="long" column="idcliente"><generator class="increment"/></id>
+		<property name="dni" column="dni" type="long" />
+		<property name="nombre" column="nombre" type="string" length="100"  />
+		<property name="direccion" column="direccion" type="string" length="100" />
+		<property name="ciudad" column="ciudad" type="string" length="100" />
+		<property name="telefono" column="telefono" type="string" length="100" />
+    </class>
+</hibernate-mapping>

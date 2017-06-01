@@ -3,6 +3,7 @@ package com.concesionaria.Model.Entity;
 import java.util.Date;
 
 
+
 public class Revision implements java.io.Serializable{
 	private boolean filtro;
 	private Date fecha;
@@ -11,6 +12,10 @@ public class Revision implements java.io.Serializable{
 	private boolean revisionMotor;
 	private long oid;
 	
+
+
+
+
 /**
 * Constructor de la clase Revision sin parametros
 */	
@@ -69,6 +74,10 @@ public long getOid() {
 }
 
 public void setOid(int oid) {
+	this.oid = oid;
+}
+
+public void setOid(long oid) {
 	this.oid = oid;
 }
 

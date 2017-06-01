@@ -65,7 +65,7 @@ public void addVenta(Venta unaVenta){
 public Vehiculo searchVehiculo(String unaPatente)
 {
 	for (Vehiculo unVehiculo : this.getVehiculos()) {
-		if (unVehiculo.getPatente() == unaPatente) {
+		if (unVehiculo.getPatente().equals(unaPatente)) {
 			return unVehiculo;
 		}
 	}
